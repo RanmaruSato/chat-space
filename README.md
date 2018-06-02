@@ -1,3 +1,5 @@
+# readmeにDB設計内容を記載
+
 ## membersテーブル
 
 |Column|Type|Options|
@@ -20,9 +22,9 @@
 |member_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
+- has_many :users, through: :members
 - has_many :messages
-- has_many :members, through: :members
+- has_many :members
 
 
 ## messagesテーブル
@@ -36,9 +38,8 @@
 
 
 ### Association
-- belongs_to :group
+- belongs_to :group,through: :members
 - belongs_to :user
-- has_many :members,through: :user_groups
 
 ## usersテーブル
 
@@ -50,7 +51,7 @@
 |member_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
+- has_many :users,through: :members
 - has_many :messages
-- has_many :members,through: :members
+- has_many :members
 
