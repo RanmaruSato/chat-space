@@ -19,7 +19,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|member_id|references|null: false, foreign_key: true|
+
 
 ### Association
 - has_many :users, through: :members
