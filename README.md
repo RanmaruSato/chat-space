@@ -48,7 +48,6 @@
 |name|string|null: false|
 |email|string|null: false,unique: true|
 |password|string|null: false|
-|member_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups,through: :members
