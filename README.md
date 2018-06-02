@@ -31,8 +31,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
-|image|string|null: false|
+|body|text|
+|image|string|
 |member_id|references|null: false, foreign_key: true|
 
 
