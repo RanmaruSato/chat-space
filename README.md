@@ -33,7 +33,7 @@
 |------|----|-------|
 |message|text|null: false|
 |image|string|null: false|
-|member_id|integer|null: false, foreign_key: true|
+|member_id|references|null: false, foreign_key: true|
 
 
 
