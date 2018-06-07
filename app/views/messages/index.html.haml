@@ -3,20 +3,20 @@
     %p.sidebar__header__name aoki
     %ul.sidebar__header__icon
       %li.sidebar__header__icon__edit
-        = link_to root_path do
+        = link_to "#" do
           = fa_icon"edit"
       %li.sidebar__header__icon__cog
-        = link_to root_path do
+        = link_to "#" do
           = fa_icon"cog"
   .sidebar__content
     = render partial: "groups"
 .content
-  .content__top
-    .content__top__name
+  .content__header
+    .content__header__name
       sampleグループ
-      %p.content__top__member
+      %p.content__header__member
         aoki,sato
-    .content__top__edit
+    .content__header__edit
       = link_to'Edit'
   .content__main
     =render partial: "messages"
@@ -27,11 +27,3 @@
         %i.fa.fa-picture-o
         %input#upload-icon{name: "image",type:"file",accept:"image/jpeg, image/gif, image/png",style:"display:none"}
       %input#submit{type: "button",name: "submit",value: "Send"}
-
-
-
-
-
-
-
-
