@@ -1,12 +1,12 @@
 .content{
-  height:100vh;
   width: calc(100% - 300px);
   padding-left:300px;
+  height:100vh;
   &__header{
-    height: 10%;
+    height: 130px;
     width:100%;
       &__name{
-        padding-top:30px;
+        padding-top:50px;
         padding-left:40px;
         font-size: 20px;
         color: #333333;
@@ -19,7 +19,7 @@
       &__edit{
         float:right;
         margin-right:40px;
-        margin-top:28px;
+        margin-top:38px;
         position:relative;
         width:60px;
         float:right;
@@ -36,9 +36,11 @@
       }
   }
   &__main{
-    height: 80%;
+    height: 730px;
+    width:100%;
     border-top:$silver;
     background-color:$gray;
+    overflow:scroll;
       &__name{
         padding-left:40px;
         padding-top:40px;
@@ -62,30 +64,36 @@
       }
   }
   &__bottom{
-    height: 10%;
+    height: 95px;
     width: 100%;
     background-color: $silver;
-  }
+    position: relative;
     #message-box{
-      margin-top:20px;
-      margin-left:40px;
+      // margin-top:50px;
+      // margin-left:40px;
       width:1170px;
       height:50px;
+      position: absolute;
+      top:25px;
+      left:40px
     }
       .fa-picture-o{
-        position:relative;
-        right:40px;
+        position: absolute;
+        top:45px;
+        right:200px;
+
       }
     #submit{
       width:100px;
       height:55px;
-      margin-right:40px;
       font-size: 20px;
       background-color: $light-blue;
       border-color: $light-blue;
       color:$white;
-      margin-top:20px;
-      float:right;
+      position: absolute;
+      right:40px;
+      top:25px;
+    }
   }
 }
 
