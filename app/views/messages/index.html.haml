@@ -23,12 +23,8 @@
       =render partial: "messages"
     .content__bottom
       %form.message-form
-        %input#message-box{name: "name",type: "textarea",placeholder: "type a message", row: "3", cols:"20"}
+        %input.message-box{name: "name",type: "textarea",placeholder: "type a message", row: "3", cols:"20"}
           %label.upload-label{for: "upload-icon"}
             %i.fa.fa-picture-o
-            %input#upload-icon{name: "image", type: "file", accept: "image/jpeg, image/gif, image/png", style: "display:none"}
-        %input#submit{type: "button" ,name: "submit",value: "Send"}
-        / %label.upload-label{for: "upload-icon"}
-        /   %i.fa.fa-picture-o
-        /   %input#upload-icon{name: "image", type: "file", accept: "image/jpeg, image/gif, image/png", style: "display:none"}
-        / %input#submit{type: "button" ,name: "submit",value: "Send"}
+            %input.upload-icon{name: "image", type: "file", accept: "image/jpeg, image/gif, image/png", style: "display:none"}
+        %input.submit{type: "button" ,name: "submit",value: "Send"}
