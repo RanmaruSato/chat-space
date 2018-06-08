@@ -1,66 +1,67 @@
 .content{
   width: calc(100% - 300px);
-  padding-left:300px;
-  height:100vh;
+  padding-left: 300px;
+  height: 100vh;
   &__header{
     height: 130px;
-    width:100%;
+    width: 100%;
       &__name{
-        padding-top:50px;
-        padding-left:40px;
+        padding-top: 50px;
+        padding-left: 40px;
         font-size: 20px;
         color: #333333;
         float: left;
       }
       &__member{
-        font-size:12px;
-        color:#999999;
+        font-size: 12px;
+        color: #999999;
       }
       &__edit{
-        float:right;
-        margin-right:40px;
-        margin-top:38px;
-        position:relative;
-        width:60px;
-        float:right;
+        float: right;
+        margin-right: 40px;
+        margin-top: 38px;
+        position: relative;
+        width: 60px;
+        float: right;
         a{
-          display:block;
-          padding-top:10px;
+          display: block;
+          padding-top: 10px;
           padding-bottom:10px;
-          text-align:center;
-          border:2px solid;
-          border-color:$light-blue;
-          color:$light-blue;
-          text-decoration:none;
+          text-align: center;
+          border: 2px solid;
+          border-color: $light-blue;
+          color: $light-blue;
+          text-decoration: none;
         }
       }
   }
   &__main{
     height: 730px;
-    width:100%;
-    border-top:$silver;
-    background-color:$gray;
+    width: 100%;
+    border-top: $silver;
+    background-color: $gray;
     overflow:scroll;
-      &__name{
-        padding-left:40px;
-        padding-top:40px;
-        font-size: 16px;
-        color:$black;
-        font-weight: bold;
-        float: left;
-      }
-      &__message{
-        margin-top: 10px;
-        font-size:14px;
-        color:$black;
-        font-weight: normal;
-      }
-      &__time{
-        padding-top:40px;
-        padding-left:10px;
-        font-size: 12px;
-        color:$midle-silver;
-        float:left;
+      &__message-box{
+        padding-left: 40px;
+        padding-top: 40px;
+          &__name{
+            font-size: 16px;
+            color: $black;
+            font-weight: bold;
+            float: left;
+          }
+          &__message{
+            margin-top: 10px;
+            font-size: 14px;
+            color:$black;
+            font-weight: normal;
+          }
+          &__time{
+            padding-left:10px;
+            font-size: 12px;
+            color: $midle-silver;
+            float: left;
+          }
       }
   }
   &__bottom{
@@ -68,31 +69,28 @@
     width: 100%;
     background-color: $silver;
     position: relative;
-    #message-box{
-      width:1170px;
-      height:50px;
+    .message-box{
+      width: 1170px;
+      height: 50px;
       position: absolute;
-      top:25px;
-      left:40px
+      top: 25px;
+      left: 40px
     }
       .fa-picture-o{
         position: absolute;
-        top:45px;
-        right:200px;
-
+        top: 45px;
+        right: 200px;
       }
-    #submit{
-      width:100px;
-      height:55px;
+    .submit{
+      width: 100px;
+      height: 55px;
       font-size: 20px;
       background-color: $light-blue;
       border-color: $light-blue;
-      color:$white;
+      color: $white;
       position: absolute;
-      right:40px;
-      top:25px;
+      right: 40px;
+      top: 25px;
     }
   }
 }
-
-
