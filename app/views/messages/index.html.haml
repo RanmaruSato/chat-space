@@ -1,17 +1,5 @@
 .wrapper
-  .sidebar
-    .sidebar__header
-      %p.sidebar__header__name
-        = current_user.name
-      %ul.sidebar__header__icon
-        %li.sidebar__header__icon__edit
-          = link_to "#" do
-            = fa_icon"edit"
-        %li.sidebar__header__icon__cog
-          = link_to edit_user_path(current_user) do
-            = fa_icon"cog"
-    .sidebar__group
-      = render partial: "groups"
+  = render "sidebar"
   .content
     .content__header
       .content__header__name
