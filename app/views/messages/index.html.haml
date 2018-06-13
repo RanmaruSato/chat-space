@@ -1,19 +1,20 @@
 .wrapper
-  = render "sidebar"
+  = render  "sidebar"
   .content
     .content__header
       .content__header__name
-        sampleグループ
-        %p.content__header__member
-          aoki,sato
+        = @group.name
+        %p.content__header__member  sample
       .content__header__edit
-        = link_to'Edit'
+        = link_to'Edit', edit_group_path(@group)
     .content__main
-      =render partial: "messages"
+      - @messages.each do |message|
+        = render partial:"messages", locals:{message:message}
     .content__bottom
-      %form.message-form
-        %input.message-box{name: "name",type: "textarea",placeholder: "type a message", row: "3", cols:"20"}
-          %label.upload-label{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input.upload-icon{name: "image", type: "file", accept: "image/jpeg, image/gif, image/png", style: "display:none"}
-        %input.submit{type: "button" ,name: "submit",value: "Send"}
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+          = f.submit 'Send', class: 'form__submit'
