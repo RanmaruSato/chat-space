@@ -13,21 +13,22 @@ $(function(){
     var html = `
                   <div class="upper-message">
                     <div class="upper-message__user-name">
-                      ${message.user.name}
+                      ${message.user_name}
                     </div>
                     <div class="upper-message__date">
                       ${message.created_at}
                     </div>
                   </div>
                   <div class="lower-meesage">
+                    <p class="lower-message__content">
                     ${message}
                     ${img}
+                    </p>
                   </div>`
     return html;
   }
 
-  $(".new_message").on("submit",function(e){
-    e.preventDefault();
+  $(".new_message").on("submit",function(){
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
@@ -39,19 +40,12 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data)
       var html = buildHTML(data);
-      $('.message').append(html)
+      $('.upper-massage').append(html)
     })
     .fail(function(){
       alert('error');
     })
   })
 })
-
-
-// <% if message.content.present? %>
-//                       <p class="lower-message__content">
-//                         <%= message.content %>
-//                       </p>
-//                     <% end %>
-//                     <%= image_tag message.image.url, class: 'lower-message__image' if message.image.present? %>
