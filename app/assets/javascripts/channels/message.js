@@ -22,7 +22,6 @@ $(function(){
   }
   function scrollBottom(position){
     $(position).animate({ scrollTop: $(position)[0].scrollHeight}, 'fast');
-    return false;
   }
   $(".new_message").on("submit",function(e){
     e.preventDefault();
